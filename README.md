@@ -1,2 +1,2 @@
-# CCNP_EIGRP_2
+# CCNP EIGRP 2
 Enhanced Interior Gateway Routing Protocol
