@@ -21,6 +21,7 @@ Enhanced Interior Gateway Routing Protocol
                                         |
                                     ISP Router 1
                                
+                                        s1
                                         |
 
                                 10.2.2.12/255.255.255.0
@@ -68,7 +69,7 @@ Enhanced Interior Gateway Routing Protocol
          (略)
          ！
          int s0
-         ip address 10.1.1.100 255.255.255.20
+         ip address 10.1.1.100 255.255.255.0
          no ip directed-broadcast
          ip summary-address eigrp 172.16.0.0 255.255.0.0 5
          ip summary-address eigrp 10.0.0.0 255.0.0.0 5
@@ -104,6 +105,17 @@ Enhanced Interior Gateway Routing Protocol
   
   
           ISP_Router1#sh ip route
+          
+          // mode 中 EIGRP 代表 D, connected 代表 C
+          
+          C
+          C
+          C
+          D 192.168.1.0/255.255.255.0 via 10.1.1.1, S0
+            192.168.2.0/255.255.255.0 is variably subnetted, 2 subnets, 2 masks
+           // int s0
+           // ip address 10.1.1.100 255.255.255.0
+          D 192.168.2.0/255.255.255.128 via 10.2.2.2, S1
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
                                                            
