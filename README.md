@@ -166,6 +166,35 @@ Enhanced Interior Gateway Routing Protocol
      //SRTT means 平均送出和接收資訊的時間 （smooth round trip time）
      //RTO means 再次傳送的中間時間 (retransmit interval)
 
-  
+ # 其他路由指令
+ 
+     #sh ip protocols
+     // 顯示路由協定狀態
+     
+     #sh ip route
+     // 查看路由表學習結果
+     
+     #sh ip route eigrp
+     // 查看路由表特定協定的學習結果
+     
+     #sh ip eigrp traffic
+     // 顯示路由器特定協定的封包收發統計資訊
+     
+     #debug ip eigrp
+     // 開啟除錯
+     
+     #debug eigrp packets
+     // 查看 eigrp 所有封包類型
+     
+     #debug eigrp neighbors
+     // 開啟鄰接的除錯功能
+     
+     #no debug all
+     // 關閉除錯
+     
+     #debug ip eigrp summary
+     // 顯示 路徑集合的資訊（包含過濾及路徑再配置）
+     
+     
 
 
