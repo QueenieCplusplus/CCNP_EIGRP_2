@@ -111,6 +111,7 @@ Enhanced Interior Gateway Routing Protocol
   (5) 為路由器 B 設定 EIGRP 網段 192.168.2.0，設定完成後，使用指令 sh run 檢視路由器資訊。
         
   (6) 在 ISP 路由器上，執行命令 show ip route，查看路由表結果。
+      結果顯示路由器透過 10.2.2.2 此目標 IP 位址，學習到 192.168.2.0 網段。
   
   
           ISP_Router1#sh ip route
@@ -119,13 +120,17 @@ Enhanced Interior Gateway Routing Protocol
           
           C
           C
-          C
+          C (略)
+          
           D 192.168.1.0/255.255.255.0 via 10.1.1.1, S0
             192.168.2.0/255.255.255.0 is variably subnetted, 2 subnets, 2 masks
            // int s0
            // ip address 10.1.1.100 255.255.255.0
+           
           D 192.168.2.0/255.255.255.128 via 10.2.2.2, S1
             192.168.2.0/255.255.255.0 via 10.2.2.2, S1
+           // int s1
+           // ip address 10.2.2.100 255.255.255.0
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
                                                            
