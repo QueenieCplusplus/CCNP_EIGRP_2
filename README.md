@@ -74,6 +74,10 @@ Enhanced Interior Gateway Routing Protocol
          no ip mroute-cache
          no fair-queue
          (略)
+         !
+         router eigrp 200
+         network 10.0.0.0
+         network 172.16.0.0
         
         
     
