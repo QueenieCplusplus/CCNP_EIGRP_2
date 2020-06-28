@@ -134,7 +134,7 @@ Enhanced Interior Gateway Routing Protocol
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
     
-   # 自動集合
+   # 路徑自動集合
    
     auto summary 
  
