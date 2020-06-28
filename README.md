@@ -11,7 +11,8 @@ Enhanced Interior Gateway Routing Protocol
                                      
                                      
                                      
-                         RouterB                 RouterC
+                         RouterC                 RouterB
+                         (略)
 
 
 (1) 將各介面的 IP 位址設定好。
