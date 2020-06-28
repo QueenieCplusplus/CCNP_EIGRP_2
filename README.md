@@ -91,6 +91,8 @@ Enhanced Interior Gateway Routing Protocol
              exec-timeout 0 0
              logging sync
              no login
+         !
+         end
          
          
         
