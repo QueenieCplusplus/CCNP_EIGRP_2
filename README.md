@@ -78,6 +78,21 @@ Enhanced Interior Gateway Routing Protocol
          router eigrp 200
          network 10.0.0.0
          network 172.16.0.0
+         !
+         ip classless
+         no ip http server
+         !
+         line con 0
+         exec-timeout 0 0
+         logging sync
+         transport input none
+         line aux 0
+         line vty 0 4
+             exec-timeout 0 0
+             logging sync
+             no login
+         
+         
         
         
     
