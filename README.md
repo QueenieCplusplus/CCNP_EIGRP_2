@@ -134,10 +134,22 @@ Enhanced Interior Gateway Routing Protocol
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
     
-   # 路徑自動集合
+  # 路徑自動集合
    
     auto summary 
  
   to be continued...
+  
+  # 拓樸表的檢視
+  
+       RouterA#sh ip eigrp topology
+             
+             codecs: P - passive, A - active, U - update, Q -q uery, R - reply, r - reply status
+                     //FD feasible distance
+             
+             P 10.0.0.0/8, 1 succesors, FD
+             P 10.2.2.0/24, 1 succesors, FD, via connected, serial 1/3
+             
+             (略)
   
   
