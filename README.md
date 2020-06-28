@@ -20,7 +20,7 @@ Enhanced Interior Gateway Routing Protocol
                                         |
                                     ISP Router 1
                                
-
+                                        |
 
                                 10.2.2.12/255.255.255.0
                                         ｜
@@ -95,7 +95,9 @@ Enhanced Interior Gateway Routing Protocol
          end
          
          
-        
+  (4) 為路由器 A 設定 EIGRP 網段，包含 10.0.0.0 和 192.168.2.0，設定完成後，使用指令 sh run 檢視路由器資訊。
+  
+  (5) 為路由器 B 設定 EIGRP 網段 192.168.2.0，設定完成後，使用指令 sh run 檢視路由器資訊。
         
     
  
