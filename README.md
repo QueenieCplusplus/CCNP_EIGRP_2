@@ -12,7 +12,7 @@ Enhanced Interior Gateway Routing Protocol
                                      
                                      
                          RouterC                 RouterB
-                         (略)
+  
 
 
 (1) 將各介面的 IP 位址設定好。
@@ -38,7 +38,7 @@ Enhanced Interior Gateway Routing Protocol
                                                            |
                                                            192.168.2.65/255.255.255.240
                                                            
- (2) 利用指令 router eigrp 在路由上使用 EIGRP 設定。
+ (2) 利用指令 router eigrp 在路由器 C 上使用 EIGRP 設定。
  
  
          RouterC# conf t
@@ -100,6 +100,10 @@ Enhanced Interior Gateway Routing Protocol
   
   (5) 為路由器 B 設定 EIGRP 網段 192.168.2.0，設定完成後，使用指令 sh run 檢視路由器資訊。
         
-    
- 
+  (6) 在 ISP 路由器上，執行命令 show ip route，查看路由表結果。
+  
+  
+          ISP_Router1#sh ip route
+          
+  (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
                                                            
