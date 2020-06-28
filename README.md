@@ -77,6 +77,13 @@ Enhanced Interior Gateway Routing Protocol
          ip summary-address eigrp 10.0.0.0 255.0.0.0 5
          no ip mroute-cache
          no fair-queue
+         clockrate 56000
+         !
+         int s1
+         ip address 10.2.2.100 255.255.255.0
+         no ip directed-broadcast
+         clockrate 56000
+         !
          (略)
          !
          router eigrp 200
