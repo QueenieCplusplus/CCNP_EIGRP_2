@@ -133,4 +133,11 @@ Enhanced Interior Gateway Routing Protocol
            // ip address 10.2.2.100 255.255.255.0
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
-                                                           
+    
+   # 自動集合
+   
+    auto summary 
+ 
+  to be continued...
+  
+  
