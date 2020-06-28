@@ -2,7 +2,10 @@
 Enhanced Interior Gateway Routing Protocol
 
 # 實際操作
-     
+
+
+                                   ISP Router 1
+                     
 
                                      RouterA
                                      
@@ -12,6 +15,11 @@ Enhanced Interior Gateway Routing Protocol
 
 
 (1) 將各介面的 IP 位址設定好。
+
+                                 AS200: 172.16.11.0
+                                        |
+                                    ISP Router 1
+                               
 
 
                                 10.2.2.12/255.255.255.0
@@ -29,5 +37,45 @@ Enhanced Interior Gateway Routing Protocol
                                                            |
                                                            192.168.2.65/255.255.255.240
                                                            
-                                                           
+ (2) 利用指令 router eigrp 在路由上使用 EIGRP 設定。
+ 
+ 
+         RouterC# conf t
+         RouterC(config)#router eigrp 200
+         RouterC(config-router)#network 192.168.2.0
+         
+         ctrl + Z
+         
+         
+  (3) 在 ISP 路由器上設定 EIGRP 網段，包含 10.0.0.0 和 172.16.0.0，設定完成後，使用指令 sh run 來做檢視。
+  
+  
+        （略）
+        
+         ISP_Router1#sh run
+         !
+         hostname ISP_Router1
+         !
+         ip subnet-zero
+         !
+         no ip domain lookup
+         !
+         --More--
+         int lo0
+         ip address 172.16.1.100 255.255.255.0
+         no ip directed-broadcast
+         (略)
+         ！
+         int s0
+         ip address 10.1.1.100 255.255.255.20
+         no ip directed-broadcast
+         ip summary-address eigrp 172.16.0.0 255.255.0.0 5
+         ip summary-address eigrp 10.0.0.0 255.0.0.0 5
+         no ip mroute-cache
+         no fair-queue
+         (略)
+        
+        
+    
+ 
                                                            
