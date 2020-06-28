@@ -22,6 +22,8 @@ Enhanced Interior Gateway Routing Protocol
                                     ISP Router 1
                                
                                         s1
+                                10.2.2.100/255.255.255.0
+                                
                                         |
 
                                 10.2.2.12/255.255.255.0
@@ -116,6 +118,7 @@ Enhanced Interior Gateway Routing Protocol
            // int s0
            // ip address 10.1.1.100 255.255.255.0
           D 192.168.2.0/255.255.255.128 via 10.2.2.2, S1
+            192.168.2.0/255.255.255.0 via 10.2.2.2, S1
           
   (6) 如同步驟 6，使用同樣指令 sh ip route 檢視 RouterA、B、C 的路由表。
                                                            
