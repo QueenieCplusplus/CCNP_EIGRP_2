@@ -38,8 +38,8 @@ Enhanced Interior Gateway Routing Protocol
                        192.168.2.50          192.168.2.18   192.168.2.34/255.255.255.240
                           /                  |        \        \
          RouterC - 192.168.2.16/255.255.255.240        RouterB   
-                                                           |
-                                                           192.168.2.65/255.255.255.240
+                                                \           |
+                                                      192.168.2.65/255.255.255.240
                                                            
  (2) 利用指令 router eigrp 在路由器 C 上使用 EIGRP 設定。
  
@@ -151,5 +151,19 @@ Enhanced Interior Gateway Routing Protocol
              P 10.2.2.0/24, 1 succesors, FD, via connected, serial 1/3
              
              (略)
-  
+             
+ # 鄰接表的檢視
+ 
+        RouterC#sh ip eigrp neighbors
+        
+     H  Address(臨街的ip位址)     Int   Hold(ms)  Uptime      SRTT     RTO    Q CNT     Seq Type(序號)
+     1 192.168.2.49            se0/0    13     00:05:13     136     1140       0        158
+     0 192.168.2.65            et0/0    14     00:28:42      1       200       0        140
+
+     //Q CNT 佇列
+     //uptime means 啟動時間
+     //hold means 最大等待時間（未收到鄰近資訊的時間）
+     //SRTT means 平均送出和接收資訊的時間 （smooth round trip time）
+     //RTO means 再次傳送的中間時間 (retransmit interval)
+
   
